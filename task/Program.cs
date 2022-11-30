@@ -2,6 +2,9 @@
 // Пример: ["hello","-2","world","=)"] -> [-2,"=)"]
 
 string[] array = { "hello", "-2", "world", "=)" };
+
+void CountElementsOfArray(string[]array)
+{
 Console.Write("[");
 for (int i = 0; i < array.Length; i++)
 {
@@ -15,3 +18,6 @@ for (int i = 0; i < array.Length; i++)
     }
 }
 Console.Write("]");
+}
+
+CountElementsOfArray(array);

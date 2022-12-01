@@ -3,21 +3,34 @@
 
 string[] array = { "hello", "-2", "world", "=)" };
 
-void CountElementsOfArray(string[]array)
+
+
+string[] CountElementsOfArray(string[] array)
 {
-Console.Write("[");
-for (int i = 0; i < array.Length; i++)
-{
-    int count = array[i].Length;
-    if (count <= 3)
+    
+    string[] newArray = new string[array.Length];
+
+    for (int i = 0; i < array.Length; i++)
     {
-        
-        Console.Write($"{array[i]}");
-        if(i < array.Length -1) Console.Write($",");
-        
+        int count = array[i].Length;
+        if (count <= 3)
+        {
+            newArray[i] += array[i];
+        }
     }
-}
-Console.Write("]");
+    return newArray;
 }
 
-CountElementsOfArray(array);
+void PrintArray(string[] array)
+{
+    Console.Write("[");
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"{array[i]} "); 
+        if (i < array.Length - 1) Console.Write(",");
+    }
+    Console.Write("]");
+}
+
+string[] result = CountElementsOfArray(array);
+PrintArray(result);

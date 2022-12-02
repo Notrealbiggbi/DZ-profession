@@ -1,7 +1,7 @@
 ﻿// Задача: Написать программу, которая из имеющегося массива строк формирует массив из строк, длина которых меньше либо равна 3 символа.
 // Пример: ["hello","-2","world","=)"] -> [-2,":-)"]
 
-string[] array = { "hello", "-2", "world", ":-)" };
+string[] array = { "hello", "-2", "world", ":-)","trololo","wer" };
 
 
 
@@ -17,6 +17,7 @@ string[] CountElementsOfArray(string[] array)
             newArray[i] = array[i];    
         } 
     }
+    newArray = newArray.Where(x => x != null) .ToArray();
     return newArray;
 }
 
